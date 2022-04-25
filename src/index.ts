@@ -4,14 +4,14 @@ import express from 'express';
 import UserRoutes from './routes/users';
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3010;
 
 app.get('/', (_req, res) => {
 	res.send('Hello World!');
 });
 
 app.listen(port, () => {
-  console.log('The application is listening on port 3000!');
+  console.log(`The application is listening on port ${port}!`);
 });
 
 const userRouter = container.resolve(UserRoutes);

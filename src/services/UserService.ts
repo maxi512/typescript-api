@@ -12,4 +12,8 @@ export default class UserService {
     public getAllUsers(): Array<Number> {
         return this.userRepository.getAll();
     }
+
+    public getFirst(): Number {
+        return this.userRepository.getFirst();
+    }
 }

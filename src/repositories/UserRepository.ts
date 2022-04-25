@@ -4,4 +4,8 @@ export default class UserRepository {
     public getAll(): Array<Number> {
         return this.users
     }
+
+    public getFirst(): Number {
+        return this.users[0]
+    }
 }

@@ -14,4 +14,9 @@ export default class UserController {
         res.send(users);
     }
 
+    getFirst = (_req, res) => {
+        const user = this.userService.getFirst();
+        res.send(user + "ASD");
+    }
+
 }
