@@ -1,5 +1,5 @@
 import { autoInjectable } from 'tsyringe';
-import UserRepository from "../repositories/UserRepository";
+import UserRepository from '../repositories/UserRepository';
 
 @autoInjectable()
 export default class UserService {

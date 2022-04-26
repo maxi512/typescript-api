@@ -1,4 +1,4 @@
-import 'reflect-metadata'
+import 'reflect-metadata';
 import { container } from 'tsyringe';
 import express from 'express';
 import UserRoutes from './routes/users';
