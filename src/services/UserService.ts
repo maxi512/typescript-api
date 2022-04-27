@@ -1,5 +1,6 @@
 import { autoInjectable } from 'tsyringe';
 import UserRepository from '../repositories/UserRepository';
+import IUser from '../repositories/IUser';
 
 @autoInjectable()
 export default class UserService {
@@ -9,7 +10,7 @@ export default class UserService {
         this.userRepository = userRepository;
     }
 
-    public getAllUsers(): Array<Number> {
+    public async getAllUsers(): Promise<Array<IUser>> {
         return this.userRepository.getAll();
     }
 

@@ -9,9 +9,9 @@ export default class UserController {
         this.userService = userService;
     }
 
-    getAllUsers = (_req, res) => {
-        const users = this.userService.getAllUsers();
-        res.send(users);
+    getAllUsers = async (_req, res) => {
+        const users = await this.userService.getAllUsers();
+        res.send({users});
     };
 
     getFirst = (_req, res) => {

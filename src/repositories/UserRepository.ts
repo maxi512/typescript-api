@@ -1,11 +1,12 @@
+import User from '../repositories/User';
+import IUser from './IUser';
 export default class UserRepository {
-    users: Array<Number> = [1, 2, 3, 4, 5];
 
-    public getAll(): Array<Number> {
-        return this.users;
+    async getAll(): Promise<Array<IUser>> {
+        return await User.find();
     }
 
-    public getFirst(): Number {
-        return this.users[0];
+    public getFirst(): any {
+        return {};
     }
 }
