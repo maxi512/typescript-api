@@ -18,8 +18,7 @@ export default class UserRepository {
         try {
             return await User.create(user);
         } catch (error) {
-            console.log(error.message); 
+            throw error.message; 
         }
-        return null;
     }
 }

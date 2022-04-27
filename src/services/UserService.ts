@@ -19,6 +19,11 @@ export default class UserService {
     }
 
     public createUser(user: IUser): Promise<IUser> {
-        return this.userRepository.create(user);
+        try {
+            return this.userRepository.create(user);
+        } 
+        catch (error) {
+            throw error;
+        } 
     }
 }
