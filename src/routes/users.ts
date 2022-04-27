@@ -16,5 +16,6 @@ export default class UsersRouter {
     addRoutes() {
         this.router.get('/', this.userController.getAllUsers);
         this.router.get('/first', this.userController.getFirst);
+        this.router.post('/', this.userController.createUser);
     }
 }

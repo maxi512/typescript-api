@@ -6,7 +6,20 @@ export default class UserRepository {
         return await User.find();
     }
 
-    public getFirst(): any {
-        return {};
+    async getFirst(): Promise<IUser> {
+        return await User.findById('6268884d4cf42f5e8bc09742');
+    }
+
+    async getById(id: string): Promise<IUser> {
+        return await User.findById(id);
+    }
+
+    async create(user: IUser): Promise<IUser> {
+        try {
+            return await User.create(user);
+        } catch (error) {
+            console.log(error.message); 
+        }
+        return null;
     }
 }

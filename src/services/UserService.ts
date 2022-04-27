@@ -10,11 +10,15 @@ export default class UserService {
         this.userRepository = userRepository;
     }
 
-    public async getAllUsers(): Promise<Array<IUser>> {
+    public getAllUsers(): Promise<Array<IUser>> {
         return this.userRepository.getAll();
     }
 
-    public getFirst(): Number {
+    public getFirst(): Promise<IUser> {
         return this.userRepository.getFirst();
+    }
+
+    public createUser(user: IUser): Promise<IUser> {
+        return this.userRepository.create(user);
     }
 }

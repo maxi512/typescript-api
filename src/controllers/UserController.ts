@@ -19,4 +19,10 @@ export default class UserController {
         res.send(user + 'ASD');
     };
 
+    createUser = async (req, res) => {
+        console.log(req);
+        const user = await this.userService.createUser(req.body);
+        res.send({user});
+    };
+
 }
