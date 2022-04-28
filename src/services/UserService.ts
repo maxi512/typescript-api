@@ -39,4 +39,13 @@ export default class UserService {
             throw error;
         }
     }
+
+    public deleteUser(id: string): Promise<IUser> {
+        try {
+            return this.userRepository.deleteUser(id);
+        }
+        catch (error) {
+            throw error;
+        }
+    }
 }

@@ -19,5 +19,6 @@ export default class UsersRouter {
         this.router.post('/', this.userController.createUser);
         this.router.get('/:id', this.userController.getById);
         this.router.put('/:id', this.userController.updateUser);
+        this.router.delete('/:id', this.userController.deleteUser);
     }
 }

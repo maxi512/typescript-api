@@ -33,4 +33,13 @@ export default class UserRepository {
             throw 'User not found or invalid id';
         }
     }
+
+    async deleteUser(id: string): Promise<IUser> {
+        try {
+            return await User.findByIdAndDelete(id);
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
+    }
 }

@@ -48,4 +48,14 @@ export default class UserController {
             res.status(400).send({error});
         }
     };
+
+    deleteUser = async (req, res) => {
+        try {
+            const user = await this.userService.deleteUser(req.params.id);
+            res.send({message: `User with name: ${user.name} and id: ${user.id} was deleted`});
+        }
+        catch (error) {
+            res.status(400).send({error});
+        }
+    };
 }
