@@ -3,6 +3,7 @@
     "plugins": ["@typescript-eslint"],
     "rules": {
       "semi": ["error", "always"],
-      "quotes": [2, "single"]
+      "quotes": [2, "single"],
+      "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1,"maxBOF": 1 }]
     }
   }

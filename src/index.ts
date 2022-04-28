@@ -5,7 +5,6 @@ import UserRoutes from './routes/users';
 import { connect } from 'mongoose';
 import cors from 'cors';
 
-
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -25,7 +24,6 @@ app.listen(port, () => {
 const userRouter = container.resolve(UserRoutes);
 
 app.use('/users', userRouter.router);
-
 
 async function run() {
   await connect('mongodb+srv://admin:admin@cluster0.3lfxv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
