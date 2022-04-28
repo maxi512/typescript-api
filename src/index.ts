@@ -27,4 +27,4 @@ app.use('/users', userRouter.router);
 
 async function run() {
   await connect('mongodb+srv://admin:admin@cluster0.3lfxv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
-} 
+}
