@@ -11,14 +11,18 @@ export default class UserRepository {
     }
 
     async getById(id: string): Promise<IUser> {
-        return await User.findById(id);
+        try {
+            return await User.findById(id);
+        } catch (error) {
+            throw 'User not found or invalid id';
+        }
     }
 
     async create(user: IUser): Promise<IUser> {
         try {
             return await User.create(user);
         } catch (error) {
-            throw error.message; 
+            throw error.message;
         }
     }
 }

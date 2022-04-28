@@ -18,12 +18,16 @@ export default class UserService {
         return this.userRepository.getFirst();
     }
 
+    public getById(id: string): Promise<IUser> {
+        return this.userRepository.getById(id);
+    }
+
     public createUser(user: IUser): Promise<IUser> {
         try {
             return this.userRepository.create(user);
-        } 
+        }
         catch (error) {
             throw error;
-        } 
+        }
     }
 }
