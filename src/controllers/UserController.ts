@@ -38,4 +38,14 @@ export default class UserController {
             res.status(400).send({error});
         }
     };
+
+    updateUser = async (req, res) => {
+        try {
+            const user = await this.userService.updateUser(req.params.id, req.body);
+            res.send({user});
+        }
+        catch (error) {
+            res.status(400).send({error});
+        }
+    };
 }

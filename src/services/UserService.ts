@@ -30,4 +30,13 @@ export default class UserService {
             throw error;
         }
     }
+
+    public updateUser(id: string, user: IUser): Promise<IUser> {
+        try {
+            return this.userRepository.updateUser(id, user);
+        }
+        catch (error) {
+            throw error;
+        }
+    }
 }

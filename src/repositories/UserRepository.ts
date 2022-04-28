@@ -25,4 +25,12 @@ export default class UserRepository {
             throw error.message;
         }
     }
+
+    async updateUser(id: string, user: IUser): Promise<IUser> {
+        try {
+            return await User.findByIdAndUpdate(id, user);
+        } catch (error) {
+            throw 'User not found or invalid id';
+        }
+    }
 }
