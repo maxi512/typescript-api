@@ -5,4 +5,4 @@ export default interface IUser extends Document {
     email: string;
     avatar?: string;
   // eslint-disable-next-line semi
-  };
+};
