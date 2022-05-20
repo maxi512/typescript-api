@@ -25,6 +25,7 @@
   "dependencies": {
     "@types/supertest": "^2.0.12",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.17.3",
     "mongoose": "^6.3.1",
     "reflect-metadata": "^0.1.13",
