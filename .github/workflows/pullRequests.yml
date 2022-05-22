@@ -11,10 +11,10 @@ jobs:
     - uses: actions/checkout@v3
     
     - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: Fixes
-          title: Fixes in ${{ steps.extract_branch.outputs.branch }}
-          body: Test
-          branch: main
+      uses: peter-evans/create-pull-request@v4
+      with:
+        commit-message: Fixes
+        title: Fixes in ${{ steps.extract_branch.outputs.branch }}
+        body: Test
+        branch: main
         
