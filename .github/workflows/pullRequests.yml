@@ -16,5 +16,6 @@ jobs:
         commit-message: Fixes
         title: Fixes in ${{ steps.extract_branch.outputs.branch }}
         body: Test
-        branch: pull-request-branch
+        base: dev
+        branch: main
         
