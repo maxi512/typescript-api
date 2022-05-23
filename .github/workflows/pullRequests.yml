@@ -10,12 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v4
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
       with:
-        commit-message: Fixes
-        title: Fixes in ${{ steps.extract_branch.outputs.branch }}
-        body: Test
-        base: main # The branch to merge into!
-        branch: dev # The branch to merge from
-        
+        destination_branch: "main"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
