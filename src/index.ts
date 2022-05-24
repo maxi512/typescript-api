@@ -23,7 +23,7 @@ app.listen(port, () => {
   console.log(`The application is listening on port ${port}!!!`);
   console.log(`The application is listening on port ${port}!!!`);
 });
-
+;
 const userRouter = container.resolve(UserRoutes);
 
 app.use('/users', userRouter.router);
