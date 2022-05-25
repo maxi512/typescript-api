@@ -14,13 +14,13 @@ dotenv.config();
 const port = process.env.PORT || 4000;
 
 app.get('/', (_req, res) => {
-	res.send('Hello World!');
+	res.send('Hello World!!');
 });
 
 db.connectDB();
 
 app.listen(port, () => {
-  console.log(`The application is listening on port ${port}!!!!!!!!!!!!!!!`);
+  console.log(`The application is listening on port ${port}!!`);
 });
 
 const userRouter = container.resolve(UserRoutes);
