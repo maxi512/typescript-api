@@ -9,7 +9,7 @@
     "start": "node dist/index.js",
     "lint": "eslint --ext ts,tsx .",
     "lint:fix": "eslint --ext ts,tsx . --fix",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
