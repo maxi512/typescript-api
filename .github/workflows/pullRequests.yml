@@ -1,4 +1,4 @@
-name: Create PR
+name: Crear PR de funcionalidad
 
 on:
   push:
