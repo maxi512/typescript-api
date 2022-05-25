@@ -17,3 +17,9 @@ jobs:
         pr_title: "Pull ${{ github.ref_name }} into main"
         pr_body: ":crown: *PR Automatizado por la action"
         github_token: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
