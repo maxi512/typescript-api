@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="3.501">
+  <testsuite name="test add function" errors="0" failures="0" skipped="0" timestamp="2022-05-25T23:12:56" time="3.437" tests="1">
+    <testcase classname="test add function should start with four users" name="test add function should start with four users" time="1.367">
+    </testcase>
+  </testsuite>
+</testsuites>
