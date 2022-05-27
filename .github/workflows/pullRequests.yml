@@ -24,7 +24,6 @@ jobs:
     needs: pr-to-main
     steps:
     - name: SonarCloud Scan
-      if: ${{ startsWith(github.event.head_commit.message, ':fix:') }}
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
