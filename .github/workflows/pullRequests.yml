@@ -30,8 +30,8 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_KEY }}
       with:
         args: >
-          -sonar.organization=maxi512
-          -sonar.projectKey=maxi512_typescript-api
+          -Dsonar.organization=maxi512
+          -Dsonar.projectKey=maxi512_typescript-api
           -Dsonar.sources=./src
 
     - uses: actions/checkout@v3
