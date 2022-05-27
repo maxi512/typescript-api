@@ -32,7 +32,7 @@ jobs:
         args: >
           -Dsonar.organization=maxi512
           -Dsonar.projectKey=maxi512_typescript-api
-          -Dsonar.sources=./src
+          -Dsonar.sources=src/
 
     - uses: actions/checkout@v3
     
