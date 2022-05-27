@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
@@ -23,7 +24,6 @@ jobs:
     needs: pr-to-main
     steps:
     - uses: actions/checkout@v3
-
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       env:
