@@ -11,3 +11,5 @@ COPY . .
 FROM base as production
 
 RUN npm run build
+
+CMD npm start
