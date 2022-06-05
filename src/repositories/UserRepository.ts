@@ -27,11 +27,7 @@ export default class UserRepository {
     }
 
     async updateUser(id: string, user: IUser): Promise<IUser> {
-        try {
-            return await User.findByIdAndUpdate(id, user);
-        } catch (error) {
-            throw 'User not found or invalid id';
-        }
+        return await User.findByIdAndUpdate(id, user);
     }
 
     async deleteUser(id: string): Promise<IUser> {
