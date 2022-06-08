@@ -7,7 +7,7 @@ async function connectDB() {
       })
       .catch((e) => {
         console.log(e);
-      });;
+      });
 }
 
 function disconnectDB() {
