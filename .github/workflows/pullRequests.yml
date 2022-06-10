@@ -13,9 +13,9 @@ jobs:
     - name: pull-request
       uses: repo-sync/pull-request@v2
       with:
-        destination_branch: "main"
-        pr_title: "Pull ${{ github.ref_name }} into main"
-        pr_body: ":crown: *PR Automatizado por la action"
+        destination_branch: "test"
+        pr_title: "Pull ${{ github.ref_name }} into test"
+        pr_body: ":crown: PR Automatizado por la action"
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
   comment-pr:
