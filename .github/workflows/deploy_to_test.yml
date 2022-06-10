@@ -38,7 +38,7 @@ jobs:
         environment: ${{ secrets.POSTMAN_ENVIRONMENT }}
 
     - name: Merge test -> main
-      uses: devmasx/merge-branch@master
+      uses: devmasx/merge-branch@v1.4.0
       with:
         type: now
         from_branch: test
