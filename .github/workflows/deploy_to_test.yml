@@ -38,11 +38,11 @@ jobs:
         environment: ${{ secrets.POSTMAN_ENVIRONMENT }}
 
     - name: Merge test -> main
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: test
-          target_branch: main
-          github_token: ${{ github.token }}
+      uses: devmasx/merge-branch@master
+      with:
+        type: now
+        from_branch: test
+        target_branch: main
+        github_token: ${{ github.token }}
 
 
