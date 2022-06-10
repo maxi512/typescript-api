@@ -17,3 +17,8 @@ Run it:
 ```shell
 npm start
 ```
+
+Run it with docker-compose:
+```shell
+docker-compose up
+```
