@@ -37,6 +37,11 @@ jobs:
         collection: ${{ secrets.POSTMAN_COLLECTION }}
         environment: ${{ secrets.POSTMAN_ENVIRONMENT }}
 
+    - name: Set Git config
+      run: |
+          git config --local user.email ${{ secrets.MY_EMAIL }}
+          git config --local user.name "Github Actions"
+
     - name: Merge test to main
       run: |
           git fetch --unshallow
