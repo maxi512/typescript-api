@@ -39,8 +39,7 @@ jobs:
 
     - name: Set Git config
       run: |
-          git config --local user.email "maximontenegro512@gmail.com"
-          git config --local user.name "maxi512"
+          gh auth login --with-token ${{ secrets.ACCOUNT_TOKEN }}
 
     - name: Merge test to main
       run: |
