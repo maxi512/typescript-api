@@ -11,5 +11,5 @@ jobs:
       - uses: alex-page/github-project-automation-plus@v0.8.1
         with:
           project: Features
-          column: To do
+          column: In progress
           repo-token: ${{ secrets.GHTOKEN }}
