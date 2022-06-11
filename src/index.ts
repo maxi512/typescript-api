@@ -18,7 +18,7 @@ app.get('/', (_req, res) => {
 db.connectDB();
 
 app.listen(port, () => {
-  console.log(`The application is listening on port ${port}!!asdasadsadsdas!`);
+  console.log(`The application is listening on port ${port}!asdasd!!`);
 });
 
 const userRouter = container.resolve(UserRoutes);
