@@ -1,4 +1,4 @@
-name: Move assigned pull requests into Testing
+name: Move pull request Card into "Desplegado en Testing"
 
 on:
   pull_request:
