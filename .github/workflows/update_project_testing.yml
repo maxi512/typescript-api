@@ -1,4 +1,4 @@
-name: Move pull request Card into "Desplegado en Testing"
+name: Mover la tarjeta del pull request a "Desplegado en Testing"
 
 on:
   pull_request:
