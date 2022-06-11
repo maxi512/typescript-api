@@ -37,10 +37,10 @@ jobs:
         collection: ${{ secrets.POSTMAN_COLLECTION }}
         environment: ${{ secrets.POSTMAN_ENVIRONMENT }}
 
-    - name: Merge test to master
+    - name: Merge test to main
       run: |
           git fetch --unshallow
-          git checkout master
+          git checkout main
           git pull
-          git merge --no-ff test -m "Auto-merge master back to dev"
+          git merge --no-ff test -m "Auto-merge main back to dev"
           git push
