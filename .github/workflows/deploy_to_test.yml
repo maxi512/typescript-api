@@ -37,12 +37,10 @@ jobs:
         collection: ${{ secrets.POSTMAN_COLLECTION }}
         environment: ${{ secrets.POSTMAN_ENVIRONMENT }}
 
-    - name: Merge test -> main
-      uses: devmasx/merge-branch@1.4.0
-      with:
-        type: now
-        from_branch: test
-        target_branch: main
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-
-
+    - name: Merge test to master
+      run: |
+          git fetch --unshallow
+          git checkout master
+          git pull
+          git merge --no-ff test -m "Auto-merge master back to dev"
+          git push
