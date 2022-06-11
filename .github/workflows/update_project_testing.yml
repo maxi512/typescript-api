@@ -13,4 +13,4 @@ jobs:
         with:
           project: Features
           column: Testing
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GHTOKEN }}
