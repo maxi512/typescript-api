@@ -1,8 +1,8 @@
-name: Mover la tarjeta del pull request a "Code review pendiente"
+name: Mover la tarjeta del pull request a "En desarrollo"
 
 on:
   pull_request:
-    types: [review_requested]
+    types: [assigned]
 
 jobs:
   automate-project-columns:
@@ -11,5 +11,5 @@ jobs:
       - uses: alex-page/github-project-automation-plus@v0.8.1
         with:
           project: Features
-          column: Code review pendiente
+          column: En desarrollo
           repo-token: ${{ secrets.GHTOKEN }}
