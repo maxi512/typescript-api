@@ -14,8 +14,8 @@ jobs:
           target_branch: main
           github_token: ${{ github.token }}
       
-      - run: npm ci
-      - run: npm run build --if-present
+      #- run: npm ci
+      #- run: npm run build --if-present
         
       - name: Build, Push and Release a Docker container to Heroku. 
         uses: gonuit/heroku-docker-deploy@v1.3.3
