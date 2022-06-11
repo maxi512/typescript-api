@@ -39,7 +39,7 @@ jobs:
 
     - name: Set Git config
       run: |
-          gh auth login --with-token ${{ secrets.ACCOUNT_TOKEN }}
+          gh auth login --with-token < ${{ secrets.ACCOUNT_TOKEN }}
 
     - name: Merge test to main
       run: |
