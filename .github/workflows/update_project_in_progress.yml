@@ -1,4 +1,4 @@
-Mover la tarjeta del pull request a "En desarrollo"
+name: Mover la tarjeta del pull request a "En desarrollo"
 
 on:
   pull_request:
