@@ -39,8 +39,8 @@ jobs:
 
     - name: Set Git config
       run: |
-          git config --local user.email ${{ secrets.MY_EMAIL }}
-          git config --local user.name "Github Actions"
+          git config --local user.email "maximontenegro512@gmail.com"
+          git config --local user.name "maxi512"
 
     - name: Merge test to main
       run: |
