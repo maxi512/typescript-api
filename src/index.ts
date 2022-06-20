@@ -12,13 +12,14 @@ app.use(cors());
 const port = process.env.PORT || 4000;
 
 app.get('/', (_req, res) => {
-	res.send('Hello World!!!!!!!!!!');
+	res.send('Hello World!!!!!!!!asdasdasddasa111sdas!!');
 });
 
 db.connectDB();
 
 app.listen(port, () => {
   console.log(`The application is listening on port ${port}!asdasd!!`);
+
 });
 
 const userRouter = container.resolve(UserRoutes);
