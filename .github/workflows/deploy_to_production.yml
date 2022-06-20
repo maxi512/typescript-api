@@ -1,0 +1,31 @@
+name: Deploy a produccion
+
+on: [workflow_dispatch]
+
+jobs:
+ merge-and-deploy-to-production:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge test -> main
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: test
+          target_branch: main
+          github_token: ${{ github.token }}
+
+      - uses: actions/checkout@v3
+        
+      - name: Build, Push and Release a Docker container to Heroku. 
+        uses: gonuit/heroku-docker-deploy@v1.3.3
+        with:
+          email: ${{ secrets.HEROKU_EMAIL }}
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME_MAIN }}
+
+      - uses: HiromiShikata/gh-actions-move-all-cards-on-projects@v1.0.1
+        with:
+          project_name: Features
+          from_column_name: Desplegado en Testing
+          to_column_name: Desplegado en Produccion
+          github_token: ${{ secrets.GHTOKEN }}
