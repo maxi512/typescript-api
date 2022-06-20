@@ -6,9 +6,5 @@ describe('test add function', () => {
         const response = await request(app).get('/users');
         expect(response.body.users).toHaveLength(4);
 
-
-
-
-        
     });
 });
