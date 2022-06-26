@@ -53,6 +53,8 @@ jobs:
         comment_title: "Tests Results"
     
     - run: gh pr ready
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   lint:
     runs-on: ubuntu-latest
