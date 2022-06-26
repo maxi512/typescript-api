@@ -16,6 +16,7 @@ jobs:
         destination_branch: "test"
         pr_title: "Pull ${{ github.ref_name }} into test"
         pr_body: ":crown: PR Automatizado por la action"
+        pr_draft: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
   comment-pr:
@@ -50,10 +51,11 @@ jobs:
       if: always()
       with:
         comment_title: "Tests Results"
+    
+    - run: gh pr ready
 
   lint:
     runs-on: ubuntu-latest
-    needs: pr-to-test
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
