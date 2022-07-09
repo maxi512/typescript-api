@@ -1,0 +1,16 @@
+name: Mover la tarjeta del pull request a "Desplegado en Testing"
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  automate-project-columns:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: alex-page/github-project-automation-plus@v0.8.1
+        with:
+          project: Features
+          column: Desplegado en Testing
+          repo-token: ${{ secrets.GHTOKEN }}

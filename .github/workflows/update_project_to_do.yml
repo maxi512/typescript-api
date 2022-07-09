@@ -1,8 +1,8 @@
-name: Move assigned pull requests into To do
+name: Mover la tarjeta del pull request a "To do"
 
 on:
   pull_request:
-    types: [assigned]
+    types: [opened]
 
 jobs:
   automate-project-columns:
