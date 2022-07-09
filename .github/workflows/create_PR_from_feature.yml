@@ -16,8 +16,10 @@ jobs:
         destination_branch: "test"
         pr_title: "Pull ${{ github.ref_name }} into test"
         pr_body: ":crown: PR Automatizado por la action"
-        pr_draft: true
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - run: gh extension install kyanny/gh-pr-draft
+    - run: gh pr-draft
 
   comment-pr:
     runs-on: ubuntu-latest
