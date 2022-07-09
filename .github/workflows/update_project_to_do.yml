@@ -2,7 +2,7 @@ name: Mover la tarjeta del pull request a "To do"
 
 on:
   pull_request:
-    types: [opened]
+    types: [converted_to_draft]
 
 jobs:
   automate-project-columns:
